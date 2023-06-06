@@ -80,7 +80,7 @@ export class Login extends Component {
                                 
                                 <div class="text-center p-t-46 p-b-20">
                                     <span class="txt2">
-                                        or sign up using
+                                        <NavLink to="../regis">or sign up using</NavLink>
                                     </span>
                                 </div>
 
