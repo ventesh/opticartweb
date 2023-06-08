@@ -290,7 +290,6 @@ export class Home extends Component {
                             </div>
                             {product.map(pr =>
                                 <div class="container"  >
-
                                     <div class="row product__filter" key={pr.productId}>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 ">
                                             <div class="product__item">
