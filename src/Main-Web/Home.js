@@ -4,12 +4,19 @@ import { varibles } from "../API/variable";
 
 export class Home extends Component {
 
+    
     constructor(props) {
         super(props);
 
         this.state = {
-            product: []
+            product: [],
+            loggedusernm : localStorage.getItem("user-info")
+            
         }
+    }
+
+    logout(){
+        localStorage.clear()
     }
 
     refreshlist() {
@@ -27,7 +34,8 @@ export class Home extends Component {
     render() {
 
         const {
-            product
+            product,
+            loggedusernm
         } = this.state;
 
         return (
@@ -56,7 +64,7 @@ export class Home extends Component {
                     work correctly both with client-side routing and a non-root public URL.
                     Learn how to configure a non-root public URL by running `npm run build`.
                     --> */}
-                    <title>Male-Fashion | Template</title>
+                    <title>OPticart-Fashion</title>
 
                     {/* <!-- Google Font --> */}
                     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -122,24 +130,19 @@ export class Home extends Component {
                                     <div class="row">
                                         <div class="col-lg-6 col-md-7">
                                             <div class="header__top__left">
-                                                <p>Free shipping, 30-day return or refund guarantee.</p>
+                                                <p>Protect your eye with our best products..!!</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-5">
                                             <div class="header__top__right">
                                                 <div class="header__top__links">
                                                     <NavLink to="/login" >Sign In</NavLink>
-                                                    {/* <a href="#">Sign in</a> */}
-                                                    <a href="#">FAQs</a>
-                                                </div>
-                                                <div class="header__top__hover">
-                                                    <span>Usd <i class="arrow_carrot-down"></i></span>
-                                                    <ul>
-                                                        <li>USD</li>
-                                                        <li>EUR</li>
-                                                        <li>USD</li>
-                                                    </ul>
-                                                </div>
+                                                    &nbsp;&nbsp;&nbsp;
+                                                    <a>Welcome : {loggedusernm}</a>
+                                                    &nbsp;&nbsp;&nbsp;
+                                                    <button style={{"border":"none" , "backgroundColor":"black" , "color":"white"}}>Logout</button>
+                                                    {/* <a href="#">Sign in</a> */}                                                    
+                                                </div>                                                
                                             </div>
                                         </div>
                                     </div>
@@ -149,25 +152,26 @@ export class Home extends Component {
                                 <div class="row">
                                     <div class="col-lg-3 col-md-3">
                                         <div class="header__logo">
-                                            <a href="./index.html"><img src="/assets/img/logo.png" alt="" /></a>
+                                            <a href="./index.html"><img src="/assets/img/opti.jpg" height="150px" width="300px"  alt="" /></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <nav class="header__menu mobile-menu">
                                             <ul>
                                                 <li class="active"><a href="./index.html">Home</a></li>
-                                                <li><a href="./shop.html">Shop</a></li>
+                                                <li><NavLink to="/shop">Shop</NavLink></li>
                                                 <li><a href="#">Pages</a>
                                                     <ul class="dropdown">
-                                                        <li><a href="./about.html">About Us</a></li>
-                                                        <li><a href="./shop-details.html">Shop Details</a></li>
+                                                        <li><NavLink to="/about">About Us</NavLink></li>
+                                                        <li><NavLink to="/detail">Shop Detaill</NavLink></li>
                                                         <li><a href="./shopping-cart.html">Shopping Cart</a></li>
                                                         <li><a href="./checkout.html">Check Out</a></li>
                                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                                     </ul>
                                                 </li>
                                                 <li><a href="./blog.html">Blog</a></li>
-                                                <li><a href="./contact.html">Contacts</a></li>
+                                                <li><NavLink to="/contact">Contacts</NavLink></li>
+                                                {/* <li><a href="./contact.html">Contacts</a></li> */}
                                             </ul>
                                         </nav>
                                     </div>
@@ -242,10 +246,10 @@ export class Home extends Component {
                                     <div class="col-lg-7 offset-lg-4">
                                         <div class="banner__item">
                                             <div class="banner__item__pic">
-                                                <img src="/assets/img/banner/banner-1.jpg" alt="" />
+                                                <img src="/assets/img/C1/cat-01.jpg" width="600px" alt="" />
                                             </div>
                                             <div class="banner__item__text">
-                                                <h2>Clothing Collections 2030</h2>
+                                                <h2>Sunglasses Collections 2023</h2>
                                                 <a href="#">Shop now</a>
                                             </div>
                                         </div>
@@ -253,10 +257,10 @@ export class Home extends Component {
                                     <div class="col-lg-5">
                                         <div class="banner__item banner__item--middle">
                                             <div class="banner__item__pic">
-                                                <img src="/assets/img/banner/banner-2.jpg" alt="" />
+                                                <img src="/assets/img/C2/cat-02.jpg" alt="" />
                                             </div>
                                             <div class="banner__item__text">
-                                                <h2>Accessories</h2>
+                                                <h2>UV Glasses</h2>
                                                 <a href="#">Shop now</a>
                                             </div>
                                         </div>
@@ -264,10 +268,10 @@ export class Home extends Component {
                                     <div class="col-lg-7">
                                         <div class="banner__item banner__item--last">
                                             <div class="banner__item__pic">
-                                                <img src="/assets/img/banner/banner-3.jpg" alt="" />
+                                                <img src="/assets/img/C4/cat-04.jpg" width="600px" alt="" />
                                             </div>
                                             <div class="banner__item__text">
-                                                <h2>Shoes Spring 2030</h2>
+                                                <h2>Goggles</h2>
                                                 <a href="#">Shop now</a>
                                             </div>
                                         </div>
@@ -644,7 +648,7 @@ export class Home extends Component {
                                             <h2>Instagram</h2>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                                 labore et dolore magna aliqua.</p>
-                                            <h3>#Male_Fashion</h3>
+                                            <h3>#OPticart_Fashion</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -667,7 +671,8 @@ export class Home extends Component {
                                     <div class="col-lg-4 col-md-6 col-sm-6">
                                         <div class="blog__item">
                                             <div class="blog__item__pic set-bg" data-setbg="/assets/img/blog/blog-1.jpg"></div>
-                                            <div><img src="/assets/img/blog/blog-1.jpg" /></div>
+                                            <div><img src="/assets/img/C2/cat-02.jpg" height="270px" /></div>
+                                            <br/>
                                             <div class="blog__item__text">
                                                 <span><img src="/assets/img/icon/calendar.png" alt="" /> 16 February 2020</span>
                                                 <h5>What Curling Irons Are The Best Ones</h5>
@@ -679,6 +684,7 @@ export class Home extends Component {
                                         <div class="blog__item">
                                             <div class="blog__item__pic set-bg" data-setbg="/assets/img/blog/blog-2.jpg"></div>
                                             <div><img src="/assets/img/blog/blog-2.jpg" /></div>
+                                            <br/>
                                             <div class="blog__item__text">
                                                 <span><img src="/assets/img/icon/calendar.png" alt="" /> 21 February 2020</span>
                                                 <h5>Eternity Bands Do Last Forever</h5>
@@ -690,6 +696,7 @@ export class Home extends Component {
                                         <div class="blog__item">
                                             <div class="blog__item__pic set-bg" data-setbg="/assets/img/blog/blog-3.jpg"></div>
                                             <div><img src="/assets/img/blog/blog-3.jpg" /></div>
+                                            <br/>
                                             <div class="blog__item__text">
                                                 <span><img src="/assets/img/icon/calendar.png" alt="" /> 28 February 2020</span>
                                                 <h5>The Health Benefits Of Sunglasses</h5>
@@ -753,15 +760,15 @@ export class Home extends Component {
                                 <div class="row">
                                     <div class="col-lg-12 text-center">
                                         <div class="footer__copyright__text">
-                                            {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+                                      
                                             <p>Copyright ©
                                                 <script>
                                                     document.write(new Date().getFullYear());
-                                                </script>2020
+                                                </script>2023
                                                 All rights reserved | This template is made with <i class="fa fa-heart-o"
-                                                    aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                                    aria-hidden="true"></i> by <a href="https://bananasofttech.pythonanywhere.com" target="_blank">Banana SoftInfotech</a>
                                             </p>
-                                            {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+                                      
                                         </div>
                                     </div>
                                 </div>
