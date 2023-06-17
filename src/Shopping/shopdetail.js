@@ -4,35 +4,32 @@ import { varibles } from "../API/variable";
 
 export class ShopDetail extends Component {
     
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.state = {
-            product: [],
-            
+            product: []            
         }
     }
 
-    
-
-    refreshlist(){
-        fetch(varibles.API_URL + "ProductTbls" + "/" + 3)
-        .then(responce => responce.json())
-        .then(data => {
-            this.setState({product: data})
-        })
+    refreshlist() {
+        fetch(varibles.API_URL + 'ProductTbls')
+            .then(responce => responce.json())
+            .then(data => {
+                this.setState({ product: data })
+            })
     }
 
-    componentDidMount(){
-        this.refreshlist()
+    componentDidMount() {
+        this.refreshlist();
     }
 
     render(){
 
-        const{
-            product,
-            
-        } = this.setState;
+        const {
+            product
+        } = this.state;
+
 
     return (
         <html>
@@ -170,8 +167,10 @@ export class ShopDetail extends Component {
                 {/* <!-- Header Section End --> */}
                 {/* <!-- Shop Details Section Begin --> */}
                 <section class="shop-details">
+                    
                     <div class="product__details__pic">
-                        <div class="container">
+                        {product.map(pr => 
+                        <div class="container" key={pr.productId}>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="product__details__breadcrumb">
@@ -215,7 +214,7 @@ export class ShopDetail extends Component {
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                             <div class="product__details__pic__item">
-                                                <img src="img/shop-details/product-big-2.png" alt=""/>
+                                                <img src={"/assets/img" + pr.productImage} alt=""/>
                                             </div>
                                         </div>
                                         <div class="tab-pane" id="tabs-2" role="tabpanel">
@@ -238,6 +237,7 @@ export class ShopDetail extends Component {
                                 </div>
                             </div>
                         </div>
+                        )}
                     </div>
                     <div class="product__details__content">
                         <div class="container">

@@ -7,7 +7,7 @@ import Login from './Main-Web/login/login';
 import Register from './Main-Web/registration/register';
 import Contact from './ContactUs/contact';
 import About from './About/about';
-import Shop from './Shopping/shop';
+import {Shop} from './Shopping/shop';
 import { ShopDetail } from './Shopping/shopdetail';
 
 

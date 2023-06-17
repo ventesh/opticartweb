@@ -9,7 +9,7 @@ function Login() {
     const [password,setpass] = useState("")    
 
     useEffect(() => {
-        localStorage.getItem("user-info")
+        sessionStorage.getItem("user-info")
     }, [])
 
     async function login()
@@ -28,7 +28,7 @@ function Login() {
 
         result = await result.json()
         console.warn(result)
-        localStorage.setItem("user-info",JSON.stringify(result))        
+        sessionStorage.setItem("user-info",JSON.stringify(result))        
     }
 
     return(
