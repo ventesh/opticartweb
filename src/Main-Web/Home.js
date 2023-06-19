@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { varibles } from "../API/variable";
+import { Link } from "react-router-dom";
 
 export class Home extends Component {
 
@@ -176,7 +177,7 @@ export class Home extends Component {
                                     <div class="col-lg-6 col-md-6">
                                         <nav class="header__menu mobile-menu">
                                             <ul>
-                                                <li class="active"><a href="./index.html">Home</a></li>
+                                                <li class="active"><NavLink to="/">Home</NavLink></li>
                                                 <li><NavLink to="/shop">Shop</NavLink></li>
                                                 <li><a href="#">Pages</a>
                                                     <ul class="dropdown">
@@ -315,7 +316,7 @@ export class Home extends Component {
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 " key={pr.productId}>
                                             <div class="product__item">
                                                 <div class="product__item__pic set-bg" data-setbg="/assets/img/product/product-1.jpg">
-                                                    <div><img src={"/assets/img" + pr.productImage} height="250px" width="300px" /></div>
+                                                    <div><Link to={`/detail/${pr.productId}`}><img src={"/assets/img" + pr.productImage} height="250px" width="300px" /></Link></div>
                                                     <span class="label">New</span>
                                                     <ul class="product__hover">
                                                         <li><a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a></li>
@@ -326,7 +327,7 @@ export class Home extends Component {
                                                 <div className="product__item__text">
                                                     <h6>{pr.productName}</h6>
                                                     
-                                                    <NavLink to="/detail" className="add-cart"  ><a href={pr.productId} className="add-cart">+ Add To Cart</a></NavLink>
+                                                    <a href={pr.productId} className="add-cart">+ Add To Cart</a>
                                                     <div className="rating">
                                                         <i className="fa fa-star"></i>
                                                         <i className="fa fa-star"></i>
