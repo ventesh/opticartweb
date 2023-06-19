@@ -373,7 +373,7 @@ export class Home extends Component {
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 " key={ct.categoryId}>
                                             <div class="product__item">
                                                 <div class="product__item__pic set-bg" data-setbg="/assets/img/product/product-1.jpg">
-                                                    <div><img src={"/assets/img" + ct.image} /> 
+                                                    <div><Link to={`/catshow/${ct.categoryId}`}><img src={"/assets/img" + ct.image} /></Link> 
                                                         <div className="banner_item">
                                                             <div class="banner__item__text">
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>{ct.categoryname}</a>                                                            

@@ -1,50 +1,25 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, { Component, useEffect, useState } from "react";
+import { NavLink, json, useParams } from "react-router-dom";
 import { varibles } from "../API/variable";
 import { Link } from "react-router-dom";
 
-export class Shop extends Component {
 
-    constructor(props){
-        super(props);
+function Catshow() {
 
-        this.state = {
-            products: [],
-            cats: []
-        }
-    }
+    const [cats, setcats] = useState([]);
+    const[products,setproducts] = useState([]);
 
-    refreshlist(){
-        fetch(varibles.API_URL + "ProductTbls")
-        .then(responce => responce.json())
-        .then(data => {
-            this.setState({ products: data })
-        })
-    }
+    const categoryid = useParams();
 
-    catrefreshlist(){
-        fetch(varibles.API_URL + "categoryTbls")
+    useEffect(()=>{
+        fetch(`http://localhost:51507/api/ProductTbls/cat/${categoryid.categoryid}`)
         .then(responce=>responce.json())
-        .then(data => {
-            this.setState({ cats: data })
-        })
-    }
+        .then(json => setproducts(json))
+        console.log(categoryid);
+    })
 
-    componentDidMount(){
-        this.refreshlist();
-        this.catrefreshlist();
-    }
-
-
-
-    render() {
-
-        const {
-            products,
-            cats
-        } = this.state;
-
-        return (
+    return(
+        <div>
             <html>
                 <haed>
                     <meta charset="utf-8" />
@@ -263,19 +238,7 @@ export class Shop extends Component {
                                                         <a data-toggle="collapse" data-target="#collapseOne">Categories</a>
                                                     </div>
                                                     
-                                                    <div id="collapseOne" className="collapse show" data-parent="#accordionExample" >
-                                                    {cats.map(ct=> 
-                                                        <div className="card-body" key={ct.categoryId}>
-                                                            <div className="shop__sidebar__categories">
-                                                                <ul className="nice-scroll">
-                                                                    {/* <li><a href="#"></a></li>*/}
-                                                                    <h2><a href="#" >{ct.categoryname}</a></h2>
-                                                                    <img src={"/assets/img" + ct.image} />
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        )}
-                                                    </div>
+                                                    
                                                     
                                                 </div>
                                                 <div className="card">
@@ -578,6 +541,8 @@ export class Shop extends Component {
 
                 </body>
             </html>
-        )
-    }
+        </div>
+    )
 }
+
+export default Catshow;
