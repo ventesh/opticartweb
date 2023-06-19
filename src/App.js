@@ -8,7 +8,8 @@ import Register from './Main-Web/registration/register';
 import Contact from './ContactUs/contact';
 import About from './About/about';
 import {Shop} from './Shopping/shop';
-import { ShopDetail } from './Shopping/shopdetail';
+import ShopDetail from './Shopping/shopdetail';
+import AddTocart from './AddToCart/addtocart';
 
 
 
@@ -25,7 +26,8 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/about" element={<About/>}/>
         <Route path="/shop" element={<Shop/>}/>
-        <Route path="/detail" element={<ShopDetail/>}/>
+        <Route path="/detail/:productId" element={<ShopDetail/>}/>
+        <Route path="/addtocart/:productId" element={<AddTocart/>}/>
       </Routes>
     </div>
     </BrowserRouter>
