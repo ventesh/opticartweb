@@ -335,7 +335,7 @@ export class Home extends Component {
                                                         <i className="fa fa-star-o"></i>
                                                         <i className="fa fa-star-o"></i>
                                                     </div>
-                                                    <h5>{pr.productPrice}</h5>
+                                                    <h5>₹{pr.productPrice}</h5>
                                                     <div class="product__color__select">
                                                         <label for="pc-1">
                                                             <input type="radio" id="pc-1" />

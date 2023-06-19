@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { NavLink, json, useParams } from "react-router-dom";
 function AddTocart() {
 
-    const [cartproduct , setcartproduct] = useState([]);
+    const [cartproduct, setcartproduct] = useState([]);
 
     const productId = useParams();
-    
+
     useEffect(() => {
         fetch(`http://localhost:51507/api/ProductTbls/${productId.productId}`)
-        .then(responce=>responce.json())
-        .then(json => setcartproduct(json))        
+            .then(responce => responce.json())
+            .then(json => setcartproduct(json))
     })
 
     return (
@@ -96,7 +96,7 @@ function AddTocart() {
                                 </div>
                                 <div class="col-lg-6 col-md-5">
                                     <div class="header__top__right">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +169,7 @@ function AddTocart() {
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Product</th>
+                                                <th className="text-center">Product</th>
                                                 <th>Quantity</th>
                                                 <th>Total</th>
                                                 <th></th>
@@ -179,21 +179,29 @@ function AddTocart() {
                                             <tr>
                                                 <td class="product__cart__item">
                                                     <div class="product__cart__item__pic">
-                                                        <img src={"/assets/img" + cartproduct.productImage} alt="" />
+                                                        <img src={"/assets/img" + cartproduct.productImage} height="100px" width="100px" alt="" />
                                                     </div>
+                                                    <br />
                                                     <div class="product__cart__item__text">
-                                                        <h6>{cartproduct.productName}</h6>
-                                                        <h5>{cartproduct.productPrice}</h5>
+                                                        <h6>{cartproduct.productName}</h6>                                                        
                                                     </div>
                                                 </td>
-                                            </tr>    
+                                                <td class="quantity__item">
+                                                    <div class="quantity">
+                                                        <div class="pro-qty-2 text-center" >
+                                                            {cartproduct.quantity}
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart__price">₹{cartproduct.productPrice}</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="continue__btn">
-                                            <a href="#">Continue Shopping</a>
+                                            <a href="/shop">Continue Shopping</a>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -214,8 +222,8 @@ function AddTocart() {
                                 <div class="cart__total">
                                     <h6>Cart total</h6>
                                     <ul>
-                                        <li>Subtotal <span>{cartproduct.productPrice}</span></li>
-                                        <li>Total <span>{cartproduct.productPrice}</span></li>
+                                        <li>Subtotal <span>₹{cartproduct.productPrice}</span></li>
+                                        <li>Total <span>₹{cartproduct.productPrice}</span></li>
                                     </ul>
                                     <a href="#" class="primary-btn">Proceed to checkout</a>
                                 </div>
