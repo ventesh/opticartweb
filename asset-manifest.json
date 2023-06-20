@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/opticartweb/static/css/main.073c9b0a.css",
-    "main.js": "/opticartweb/static/js/main.f37c8d49.js",
+    "main.js": "/opticartweb/static/js/main.c7463ef8.js",
     "static/js/787.a8aba9de.chunk.js": "/opticartweb/static/js/787.a8aba9de.chunk.js",
     "static/media/logo.svg": "/opticartweb/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/opticartweb/index.html",
     "main.073c9b0a.css.map": "/opticartweb/static/css/main.073c9b0a.css.map",
-    "main.f37c8d49.js.map": "/opticartweb/static/js/main.f37c8d49.js.map",
+    "main.c7463ef8.js.map": "/opticartweb/static/js/main.c7463ef8.js.map",
     "787.a8aba9de.chunk.js.map": "/opticartweb/static/js/787.a8aba9de.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.f37c8d49.js"
+    "static/js/main.c7463ef8.js"
   ]
 }
