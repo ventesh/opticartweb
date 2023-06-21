@@ -28,8 +28,10 @@ function App() {
         <Route path="/shop" element={<Shop/>}/>
         <Route path="/detail/:productId" element={<ShopDetail/>}/>
         <Route path="/addtocart/:productId" element={<AddTocart/>}/>
-        <Route path="/catshow/:categoryid" element={<Catshow/>}/>
+        <Route path="/catshow/:categoryid" element={<Catshow/>}/>        
       </Routes>
+    
+    
     </div>
     </BrowserRouter>
     

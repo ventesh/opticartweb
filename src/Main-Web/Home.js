@@ -179,16 +179,15 @@ export class Home extends Component {
                                             <ul>
                                                 <li class="active"><NavLink to="/">Home</NavLink></li>
                                                 <li><NavLink to="/shop">Shop</NavLink></li>
-                                                <li><a href="#">Pages</a>
+                                                <li><NavLink to="/about">About Us</NavLink></li>
+                                                {/* <li><a href="#">Pages</a>
                                                     <ul class="dropdown">
                                                         <li><NavLink to="/about">About Us</NavLink></li>
                                                         <li><NavLink to="/detail">Shop Detaill</NavLink></li>
                                                         <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                                        <li><a href="./checkout.html">Check Out</a></li>
-                                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                                        <li><a href="./checkout.html">Check Out</a></li>                                                        
                                                     </ul>
-                                                </li>
-                                                <li><a href="./blog.html">Blog</a></li>
+                                                </li>                                                 */}
                                                 <li><NavLink to="/contact">Contacts</NavLink></li>
                                                 {/* <li><a href="./contact.html">Contacts</a></li> */}
                                             </ul>
@@ -198,8 +197,7 @@ export class Home extends Component {
                                         <div class="header__nav__option">
                                             <a href="#" class="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
                                             <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
-                                            <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span>0</span></a>
-                                            <div class="price">$0.00</div>
+                                            <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span></span></a>                                            
                                         </div>
                                     </div>
                                 </div>

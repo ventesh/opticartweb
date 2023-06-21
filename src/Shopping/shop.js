@@ -117,44 +117,42 @@ function Shop() {
                             </div>
                         </div>
                     </div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-3 col-md-3">
-                                <div className="header__logo">
-                                    <a href="./index.html"><img src="/assets/img/opti.jpg" height="150px" width="300px" alt="" /></a>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 col-md-6">
-                                <nav className="header__menu mobile-menu">
-                                    <ul>
-                                        <li className="active"><NavLink to="/">Home</NavLink></li>
-                                        <li><NavLink to="/shop"></NavLink></li>
-                                        <li><a href="#">Pages</a>
-                                            <ul className="dropdown">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3">
+                                        <div class="header__logo">
+                                            <a href="./index.html"><img src="/assets/img/opti.jpg" height="150px" width="300px" alt="" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <nav class="header__menu mobile-menu">
+                                            <ul>
+                                                <li class="active"><NavLink to="/">Home</NavLink></li>
+                                                <li><NavLink to="/shop">Shop</NavLink></li>
                                                 <li><NavLink to="/about">About Us</NavLink></li>
-                                                <li><NavLink to="/detail">Shop Details</NavLink></li>
-                                                <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                                <li><a href="./checkout.html">Check Out</a></li>
-                                                <li><a href="./blog-details.html">Blog Details</a></li>
+                                                {/* <li><a href="#">Pages</a>
+                                                    <ul class="dropdown">
+                                                        <li><NavLink to="/about">About Us</NavLink></li>
+                                                        <li><NavLink to="/detail">Shop Detaill</NavLink></li>
+                                                        <li><a href="./shopping-cart.html">Shopping Cart</a></li>
+                                                        <li><a href="./checkout.html">Check Out</a></li>                                                        
+                                                    </ul>
+                                                </li>                                                 */}
+                                                <li><NavLink to="/contact">Contacts</NavLink></li>
+                                                {/* <li><a href="./contact.html">Contacts</a></li> */}
                                             </ul>
-                                        </li>
-                                        <li><a href="./blog.html">Blog</a></li>
-                                        <li><NavLink to="/contact">Contacts</NavLink></li>
-                                        {/* <li><a href="./contact.html">Contacts</a></li> */}
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div className="col-lg-3 col-md-3">
-                                <div className="header__nav__option">
-                                    <a href="#" className="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
-                                    <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
-                                    <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span>0</span></a>
-                                    <div className="price">$0.00</div>
+                                        </nav>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3">
+                                        <div class="header__nav__option">
+                                            <a href="#" class="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
+                                            <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
+                                            <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span></span></a>                                            
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="canvas__open"><i class="fa fa-bars"></i></div>
                             </div>
-                        </div>
-                        <div className="canvas__open"><i className="fa fa-bars"></i></div>
-                    </div>
                 </header>
                 {/* <!-- Header Section End --> */}
 

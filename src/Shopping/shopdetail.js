@@ -121,16 +121,15 @@ function ShopDetail() {
                                     <ul>
                                         <li class="active"><NavLink to="/">Home</NavLink></li>
                                         <li><NavLink to="/shop">Shop</NavLink></li>
-                                        <li><a href="#">Pages</a>
-                                            <ul class="dropdown">
-                                                <li><NavLink to="/about">About Us</NavLink></li>
-                                                <li><NavLink to="/detail">Shop Details</NavLink></li>
-                                                <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                                <li><a href="./checkout.html">Check Out</a></li>
-                                                <li><a href="./blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="./blog.html">Blog</a></li>
+                                        <li><NavLink to="/about">About Us</NavLink></li>
+                                        {/* <li><a href="#">Pages</a>
+                                                    <ul class="dropdown">
+                                                        <li><NavLink to="/about">About Us</NavLink></li>
+                                                        <li><NavLink to="/detail">Shop Detaill</NavLink></li>
+                                                        <li><a href="./shopping-cart.html">Shopping Cart</a></li>
+                                                        <li><a href="./checkout.html">Check Out</a></li>                                                        
+                                                    </ul>
+                                                </li>                                                 */}
                                         <li><NavLink to="/contact">Contacts</NavLink></li>
                                         {/* <li><a href="./contact.html">Contacts</a></li> */}
                                     </ul>
@@ -140,8 +139,7 @@ function ShopDetail() {
                                 <div class="header__nav__option">
                                     <a href="#" class="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
                                     <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
-                                    <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span>0</span></a>
-                                    <div class="price">$0.00</div>
+                                    <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span></span></a>
                                 </div>
                             </div>
                         </div>
@@ -158,7 +156,7 @@ function ShopDetail() {
                                 <div class="col-lg-12">
                                     <div class="product__details__breadcrumb">
                                         <a href="./index.html">Home</a>
-                                        <a href="./shop.html">Shop</a>                                        
+                                        <a href="./shop.html">Shop</a>
                                         <p>{product.productName}</p>
                                     </div>
                                 </div>
@@ -295,12 +293,12 @@ function ShopDetail() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                     </div>
                 </section>
                 {/* <!-- Shop Details Section End --> */}
-                
+
                 {/* <!-- Footer Section Begin --> */}
                 <footer class="footer">
                     <div class="container">
