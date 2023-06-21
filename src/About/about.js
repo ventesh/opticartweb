@@ -3,24 +3,24 @@ import { NavLink } from "react-router-dom";
 
 function About() {
 
-    return(
+    return (
         <html>
             <head>
-            <meta charset="utf-8" />
-                    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <meta name="theme-color" content="#000000" />
-                    <meta
-                        name="description"
-                        content="Web site created using create-react-app"
-                    />
-                    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-                    {/* <!--
+                <meta charset="utf-8" />
+                <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="theme-color" content="#000000" />
+                <meta
+                    name="description"
+                    content="Web site created using create-react-app"
+                />
+                <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+                {/* <!--
                     manifest.json provides metadata used when your web app is installed on a
                     user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
                     --> */}
-                    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-                    {/* <!--
+                <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+                {/* <!--
                     Notice the use of %PUBLIC_URL% in the tags above.
                     It will be replaced with the URL of the `public` folder during the build.
                     Only files inside the `public` folder can be referenced from the HTML.
@@ -29,128 +29,126 @@ function About() {
                     work correctly both with client-side routing and a non-root public URL.
                     Learn how to configure a non-root public URL by running `npm run build`.
                     --> */}
-                    <title>OPticart-About</title>
+                <title>OPticart-About</title>
 
-                    {/* <!-- Google Font --> */}
-                    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
-                        rel="stylesheet" />
+                {/* <!-- Google Font --> */}
+                <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+                    rel="stylesheet" />
 
-                    {/* <!-- Css Styles --> */}
-                    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" />
-                    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" type="text/css" />
-                    <link rel="stylesheet" href="/assets/css/elegant-icons.css" type="text/css" />
-                    <link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css" />
-                    <link rel="stylesheet" href="/assets/css/nice-select.css" type="text/css" />
-                    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" type="text/css" />
-                    <link rel="stylesheet" href="/assets/css/slicknav.min.css" type="text/css" />
-                    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-                    
+                {/* <!-- Css Styles --> */}
+                <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" />
+                <link rel="stylesheet" href="/assets/css/font-awesome.min.css" type="text/css" />
+                <link rel="stylesheet" href="/assets/css/elegant-icons.css" type="text/css" />
+                <link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css" />
+                <link rel="stylesheet" href="/assets/css/nice-select.css" type="text/css" />
+                <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" type="text/css" />
+                <link rel="stylesheet" href="/assets/css/slicknav.min.css" type="text/css" />
+                <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
 
-                    {/* <!-- Js Plugins --> */}
+
+                {/* <!-- Js Plugins --> */}
 
             </head>
             <body>
-                        
-            <div class="offcanvas-menu-overlay"></div>
-                        <div class="offcanvas-menu-wrapper">
-                            <div class="offcanvas__option">
-                                <div class="offcanvas__links">
-                                    <a href="#">Sign in</a>
-                                    <a href="#">FAQs</a>
-                                </div>
-                                <div class="offcanvas__top__hover">
-                                    <span>Usd <i class="arrow_carrot-down"></i></span>
-                                    <ul>
-                                        <li>USD</li>
-                                        <li>EUR</li>
-                                        <li>USD</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="offcanvas__nav__option">
-                                <a href="#" class="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
-                                <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
-                                <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span>0</span></a>
-                                <div class="price">$0.00</div>
-                            </div>
-                            <div id="mobile-menu-wrap"></div>
-                            <div class="offcanvas__text">
-                                <p>Free shipping, 30-day return or refund guarantee.</p>
-                            </div>
-                        </div>
-                        {/* <!-- Offcanvas Menu End --> */}
 
-                        {/* <!-- Header Section Begin --> */}
-                        <header class="header">
-                            <div class="header__top">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-7">
-                                            <div class="header__top__left">
-                                                <p>Protect your eye with our best products..!!</p>
-                                            </div>
-                                        </div>                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="header__logo">
-                                            <a href="./index.html"><img src="/assets/img/opti.jpg" height="150px" width="300px"  alt="" /></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <nav class="header__menu mobile-menu">
-                                            <ul>
-                                                <li class="active"><NavLink to="/">Home</NavLink></li>
-                                                <li><a href="./shop.html">Shop</a></li>
-                                                <li><a href="#">Pages</a>
-                                                    <ul class="dropdown">
-                                                        <li><a href="./about.html">About Us</a></li>
-                                                        <li><a href="./shop-details.html">Shop Details</a></li>
-                                                        <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                                        <li><a href="./checkout.html">Check Out</a></li>
-                                                        <li><a href="./blog-details.html">Blog Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="./blog.html">Blog</a></li>
-                                                <li><NavLink to="/contact">Contacts</NavLink></li>
-                                                {/* <li><a href="./contact.html">Contacts</a></li> */}
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="header__nav__option">
-                                            <a href="#" class="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
-                                            <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
-                                            <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span>0</span></a>
-                                            <div class="price">$0.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="canvas__open"><i class="fa fa-bars"></i></div>
-                            </div>
-                        </header>
-                        {/* <!-- Header Section End --> */}
-        
-                        {/* <!-- Breadcrumb Section Begin --> */}
-    <section class="breadcrumb-option">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb__text">
-                        <h4>About Us</h4>
-                        <div class="breadcrumb__links">
-                            <a href="./index.html">Home</a>
-                            <span>About Us</span>
+                <div class="offcanvas-menu-overlay"></div>
+                <div class="offcanvas-menu-wrapper">
+                    <div class="offcanvas__option">
+                        <div class="offcanvas__links">
+                            <a href="#">Sign in</a>
+                            <a href="#">FAQs</a>
+                        </div>
+                        <div class="offcanvas__top__hover">
+                            <span>Usd <i class="arrow_carrot-down"></i></span>
+                            <ul>
+                                <li>USD</li>
+                                <li>EUR</li>
+                                <li>USD</li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="offcanvas__nav__option">
+                        <a href="#" class="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
+                        <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
+                        <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span>0</span></a>
+                        <div class="price">$0.00</div>
+                    </div>
+                    <div id="mobile-menu-wrap"></div>
+                    <div class="offcanvas__text">
+                        <p>Free shipping, 30-day return or refund guarantee.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    {/* <!-- Breadcrumb Section End --> */}
+                {/* <!-- Offcanvas Menu End --> */}
+
+                {/* <!-- Header Section Begin --> */}
+                <header class="header">
+                    <div class="header__top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-7">
+                                    <div class="header__top__left">
+                                        <p>Protect your eye with our best products..!!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <div class="header__logo">
+                                    <a href="./index.html"><img src="/assets/img/opti.jpg" height="150px" width="300px" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <nav class="header__menu mobile-menu">
+                                    <ul>
+                                        <li class="active"><NavLink to="/">Home</NavLink></li>
+                                        <li><NavLink to="/shop">Shop</NavLink></li>
+                                        <li><NavLink to="/about">About Us</NavLink></li>
+                                        {/* <li><a href="#">Pages</a>
+                                                    <ul class="dropdown">
+                                                        <li><NavLink to="/about">About Us</NavLink></li>
+                                                        <li><NavLink to="/detail">Shop Detaill</NavLink></li>
+                                                        <li><a href="./shopping-cart.html">Shopping Cart</a></li>
+                                                        <li><a href="./checkout.html">Check Out</a></li>                                                        
+                                                    </ul>
+                                                </li>                                                 */}
+                                        <li><NavLink to="/contact">Contacts</NavLink></li>
+                                        {/* <li><a href="./contact.html">Contacts</a></li> */}
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <div class="header__nav__option">
+                                    <a href="#" class="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
+                                    <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
+                                    <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="canvas__open"><i class="fa fa-bars"></i></div>
+                    </div>
+                </header>
+                {/* <!-- Header Section End --> */}
+
+                {/* <!-- Breadcrumb Section Begin --> */}
+                <section class="breadcrumb-option">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="breadcrumb__text">
+                                    <h4>About Us</h4>
+                                    <div class="breadcrumb__links">
+                                        <a href="./index.html">Home</a>
+                                        <span>About Us</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* <!-- Breadcrumb Section End --> */}
 
 
                 {/* <!-- About Section Begin --> */}
@@ -159,7 +157,7 @@ function About() {
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="about__pic">
-                                    <img src="/assets/img/about/about-us.jpg" alt=""/>
+                                    <img src="/assets/img/about/about-us.jpg" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -168,21 +166,21 @@ function About() {
                                 <div class="about__item">
                                     <h4>Who We Are ?</h4>
                                     <p>Contextual advertising programs sometimes have strict policies that need to be adhered too.
-                                    Let’s take Google as an example.</p>
+                                        Let’s take Google as an example.</p>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6">
                                 <div class="about__item">
                                     <h4>Who We Do ?</h4>
                                     <p>In this digital generation where information can be easily obtained within seconds, business
-                                    cards still have retained their importance.</p>
+                                        cards still have retained their importance.</p>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6">
                                 <div class="about__item">
                                     <h4>Why Choose Us</h4>
                                     <p>A two or three storey house is the ideal way to maximise the piece of earth on which our home
-                                    sits, but for older or infirm people.</p>
+                                        sits, but for older or infirm people.</p>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +200,7 @@ function About() {
                                     </p>
                                     <div class="testimonial__author">
                                         <div class="testimonial__author__pic">
-                                            <img src="/assets/img/about/testimonial-author.jpg" alt=""/>
+                                            <img src="/assets/img/about/testimonial-author.jpg" alt="" />
                                         </div>
                                         <div class="testimonial__author__text">
                                             <h5>Augusta Schultz</h5>
@@ -275,28 +273,28 @@ function About() {
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="team__item">
-                                    <img src="/assets/img/about/team-1.jpg" alt=""/>
+                                    <img src="/assets/img/about/team-1.jpg" alt="" />
                                     <h4>John Smith</h4>
                                     <span>Fashion Design</span>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="team__item">
-                                    <img src="/assets/img/about/team-2.jpg" alt=""/>
+                                    <img src="/assets/img/about/team-2.jpg" alt="" />
                                     <h4>Christine Wise</h4>
                                     <span>C.E.O</span>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="team__item">
-                                    <img src="/assets/img/about/team-3.jpg" alt=""/>
+                                    <img src="/assets/img/about/team-3.jpg" alt="" />
                                     <h4>Sean Robbins</h4>
                                     <span>Manager</span>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="team__item">
-                                    <img src="/assets/img/about/team-4.jpg" alt=""/>
+                                    <img src="/assets/img/about/team-4.jpg" alt="" />
                                     <h4>Lucy Myers</h4>
                                     <span>Delivery</span>
                                 </div>
@@ -319,28 +317,28 @@ function About() {
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                                <a href="#" class="client__item"><img src="/assets/img/clients/client-1.png" alt=""/></a>
+                                <a href="#" class="client__item"><img src="/assets/img/clients/client-1.png" alt="" /></a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                                <a href="#" class="client__item"><img src="/assets/img/clients/client-2.png" alt=""/></a>
+                                <a href="#" class="client__item"><img src="/assets/img/clients/client-2.png" alt="" /></a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                                <a href="#" class="client__item"><img src="/assets/img/clients/client-3.png" alt=""/></a>
+                                <a href="#" class="client__item"><img src="/assets/img/clients/client-3.png" alt="" /></a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                                <a href="#" class="client__item"><img src="/assets/img/clients/client-4.png" alt=""/></a>
+                                <a href="#" class="client__item"><img src="/assets/img/clients/client-4.png" alt="" /></a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                                <a href="#" class="client__item"><img src="/assets/img/clients/client-5.png" alt=""/></a>
+                                <a href="#" class="client__item"><img src="/assets/img/clients/client-5.png" alt="" /></a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                                <a href="#" class="client__item"><img src="/assets/img/clients/client-6.png" alt=""/></a>
+                                <a href="#" class="client__item"><img src="/assets/img/clients/client-6.png" alt="" /></a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                                <a href="#" class="client__item"><img src="/assets/img/clients/client-7.png" alt=""/></a>
+                                <a href="#" class="client__item"><img src="/assets/img/clients/client-7.png" alt="" /></a>
                             </div>
                             <div class="col-lg-3 col-md-4 col-sm-4 col-6">
-                                <a href="#" class="client__item"><img src="/assets/img/clients/client-8.png" alt=""/></a>
+                                <a href="#" class="client__item"><img src="/assets/img/clients/client-8.png" alt="" /></a>
                             </div>
                         </div>
                     </div>
@@ -354,10 +352,10 @@ function About() {
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="footer__about">
                                     <div class="footer__logo">
-                                        <a href="#"><img src="/assets/img/footer-logo.png" alt=""/></a>
+                                        <a href="#"><img src="/assets/img/footer-logo.png" alt="" /></a>
                                     </div>
                                     <p>The customer is at the heart of our unique business model, which includes design.</p>
-                                    <a href="#"><img src="/assets/img/payment.png" alt=""/></a>
+                                    <a href="#"><img src="/assets/img/payment.png" alt="" /></a>
                                 </div>
                             </div>
                             <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
@@ -388,7 +386,7 @@ function About() {
                                     <div class="footer__newslatter">
                                         <p>Be the first to know about new arrivals, look books, sales & promos!</p>
                                         <form action="#">
-                                            <input type="text" placeholder="Your email"/>
+                                            <input type="text" placeholder="Your email" />
                                             <button type="submit"><span class="icon_mail_alt"></span></button>
                                         </form>
                                     </div>
@@ -404,7 +402,7 @@ function About() {
                                             document.write(new Date().getFullYear());
                                         </script>2020
                                         All rights reserved | This template is made with <i class="fa fa-heart-o"
-                                        aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                            aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                                     </p>
                                     {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
                                 </div>
@@ -419,7 +417,7 @@ function About() {
                     <div class="h-100 d-flex align-items-center justify-content-center">
                         <div class="search-close-switch">+</div>
                         <form class="search-model-form">
-                            <input type="text" id="search-input" placeholder="Search here....."/>
+                            <input type="text" id="search-input" placeholder="Search here....." />
                         </form>
                     </div>
                 </div>

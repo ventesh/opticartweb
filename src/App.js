@@ -7,7 +7,7 @@ import Login from './Main-Web/login/login';
 import Register from './Main-Web/registration/register';
 import Contact from './ContactUs/contact';
 import About from './About/about';
-import {Shop} from './Shopping/shop';
+import Shop from './Shopping/shop';
 import ShopDetail from './Shopping/shopdetail';
 import AddTocart from './AddToCart/addtocart';
 import Catshow from './Category/categoryshow';
@@ -28,8 +28,10 @@ function App() {
         <Route path="/shop" element={<Shop/>}/>
         <Route path="/detail/:productId" element={<ShopDetail/>}/>
         <Route path="/addtocart/:productId" element={<AddTocart/>}/>
-        <Route path="/catshow/:categoryid" element={<Catshow/>}/>
+        <Route path="/catshow/:categoryid" element={<Catshow/>}/>        
       </Routes>
+    
+    
     </div>
     </BrowserRouter>
     
