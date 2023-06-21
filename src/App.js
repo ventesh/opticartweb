@@ -11,6 +11,7 @@ import Shop from './Shopping/shop';
 import ShopDetail from './Shopping/shopdetail';
 import AddTocart from './AddToCart/addtocart';
 import Catshow from './Category/categoryshow';
+import Search from './Shopping/searchpro';
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
         <Route path="/shop" element={<Shop/>}/>
         <Route path="/detail/:productId" element={<ShopDetail/>}/>
         <Route path="/addtocart/:productId" element={<AddTocart/>}/>
-        <Route path="/catshow/:categoryid" element={<Catshow/>}/>        
+        <Route path="/catshow/:categoryid" element={<Catshow/>}/>   
+        <Route path="/search/:proname" element={<Search/>}/>     
       </Routes>
     
     

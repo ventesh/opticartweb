@@ -1,28 +1,19 @@
-import React, { Component, useEffect, useState } from "react";
-import { NavLink, json, useParams } from "react-router-dom";
-import { varibles } from "../API/variable";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function Shop() {
+function Search() {
 
-    const [products,setproducts] = useState([])
-    const [cats,setcats] = useState([])
-
+    const [products, setproducts] = useState([])
     const [pro,setpro] = useState()
-    console.log("search Product name is: ",pro);
 
     const proname = useParams()
+    console.log(proname);
 
-    useEffect(()=>{
-        fetch(`http://localhost:51507/api/ProductTbls`)
-        .then(responce => responce.json())
-        .then(json => setproducts(json))
-
-        fetch(`http://localhost:51507/api/CategoryTbls`)
-        .then(res => res.json())
-        .then(json => setcats(json))
-
-        
+    useEffect(() => {
+        fetch(`http://localhost:51507/api/ProductTbls/catname/${proname.proname}`)
+            .then(res => res.json())
+            .then(json => setproducts(json))
     })
 
     return (
@@ -118,20 +109,20 @@ function Shop() {
                             </div>
                         </div>
                     </div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="header__logo">
-                                            <a href="./index.html"><img src="/assets/img/opti.jpg" height="150px" width="300px" alt="" /></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <nav class="header__menu mobile-menu">
-                                            <ul>
-                                                <li class="active"><NavLink to="/">Home</NavLink></li>
-                                                <li><NavLink to="/shop">Shop</NavLink></li>
-                                                <li><NavLink to="/about">About Us</NavLink></li>
-                                                {/* <li><a href="#">Pages</a>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <div class="header__logo">
+                                    <a href="./index.html"><img src="/assets/img/opti.jpg" height="150px" width="300px" alt="" /></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <nav class="header__menu mobile-menu">
+                                    <ul>
+                                        <li class="active"><NavLink to="/">Home</NavLink></li>
+                                        <li><NavLink to="/shop">Shop</NavLink></li>
+                                        <li><NavLink to="/about">About Us</NavLink></li>
+                                        {/* <li><a href="#">Pages</a>
                                                     <ul class="dropdown">
                                                         <li><NavLink to="/about">About Us</NavLink></li>
                                                         <li><NavLink to="/detail">Shop Detaill</NavLink></li>
@@ -139,21 +130,21 @@ function Shop() {
                                                         <li><a href="./checkout.html">Check Out</a></li>                                                        
                                                     </ul>
                                                 </li>                                                 */}
-                                                <li><NavLink to="/contact">Contacts</NavLink></li>
-                                                {/* <li><a href="./contact.html">Contacts</a></li> */}
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="header__nav__option">
-                                            <a href="#" class="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
-                                            <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
-                                            <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span></span></a>                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="canvas__open"><i class="fa fa-bars"></i></div>
+                                        <li><NavLink to="/contact">Contacts</NavLink></li>
+                                        {/* <li><a href="./contact.html">Contacts</a></li> */}
+                                    </ul>
+                                </nav>
                             </div>
+                            <div class="col-lg-3 col-md-3">
+                                <div class="header__nav__option">
+                                    <a href="#" class="search-switch"><img src="/assets/img/icon/search.png" alt="" /></a>
+                                    <a href="#"><img src="/assets/img/icon/heart.png" alt="" /></a>
+                                    <a href="#"><img src="/assets/img/icon/cart.png" alt="" /> <span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="canvas__open"><i class="fa fa-bars"></i></div>
+                    </div>
                 </header>
                 {/* <!-- Header Section End --> */}
 
@@ -231,37 +222,13 @@ function Shop() {
                                 <div className="shop__sidebar">
                                     <div className="shop__sidebar__search">
                                         <form action="#">
-                                            <input type="text" placeholder="Search..." 
+                                            <input type="text" placeholder="Search..."
                                                 value={pro}
-                                                onChange={(e)=>setpro(e.target.value)}
+                                                onChange={(e) => setpro(e.target.value)}
                                             />
                                             <button type="submit"><Link to={`/search/${pro}`}><span className="icon_search"></span></Link></button>
                                         </form>
-                                    </div>
-                                    <div className="shop__sidebar__accordion">
-                                        <div className="accordion" id="accordionExample">
-                                            <div className="card">
-                                                <div className="card-heading">
-                                                    <a data-toggle="collapse" data-target="#collapseOne">Categories</a>
-                                                </div>
-
-                                                <div id="collapseOne" className="collapse show" data-parent="#accordionExample" >
-                                                    {cats.map(ct =>
-                                                        <div className="card-body" key={ct.categoryId}>
-                                                            <div className="shop__sidebar__categories">
-                                                                <ul className="nice-scroll">
-                                                                    {/* <li><a href="#"></a></li>*/}
-                                                                    <h2><a href="#" >{ct.categoryname}</a></h2>
-                                                                    <Link to={`/catshow/${ct.categoryId}`}><img src={"/assets/img" + ct.image} /></Link>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    )}
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                             </div>
                             <div className="col-lg-9">
@@ -434,53 +401,6 @@ function Shop() {
             </body>
         </html>
     )
+
 }
-
-export default Shop;
-
-// export class Shop extends Component {
-
-//     constructor(props) {
-//         super(props);
-
-//         this.state = {
-//             products: [],
-//             cats: [],
-//         }
-//     }
-
-//     refreshlist() {
-//         fetch(varibles.API_URL + "ProductTbls")
-//             .then(responce => responce.json())
-//             .then(data => {
-//                 this.setState({ products: data })
-//             })
-//     }
-
-//     catrefreshlist() {
-//         fetch(varibles.API_URL + "categoryTbls")
-//             .then(responce => responce.json())
-//             .then(data => {
-//                 this.setState({ cats: data })
-//             })
-//     }
-
-//     componentDidMount() {
-//         this.refreshlist();
-//         this.catrefreshlist();
-//     }
-
-
-
-//     render() {
-
-//         const {
-//             products,
-//             cats
-//         } = this.state;
-
-//         return (
-            
-//         )
-//     }
-// }
+export default Search;
